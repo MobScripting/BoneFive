@@ -1,12 +1,10 @@
---Temp Config until config file is written
-local hostpicalCheckin = {x = 308.06161499023, y = -595.19683837891, z = 43.291839599609, h = 180.4409942627}
+local hospitalCheckin = { x = 308.06161499023, y = -595.19683837891, z = 43.291839599609, h = 180.4409942627 }
 local pillboxTeleports = {
     { x = 325.48892211914, y = -598.75372314453, z = 43.291839599609, h = 64.513374328613, text = 'Press ~INPUT_CONTEXT~ ~s~to go to lower Pillbox Entrance' },
     { x = 355.47183227539, y = -596.26495361328, z = 28.773477554321, h = 245.85662841797, text = 'Press ~INPUT_CONTEXT~ ~s~to enter Pillbox Hospital' },
     { x = 359.57849121094, y = -584.90911865234, z = 28.817169189453, h = 245.85662841797, text = 'Press ~INPUT_CONTEXT~ ~s~to enter Pillbox Hospital' },
 }
 
---DO NOT CHANGE FROM THIS POINT ON
 local bedOccupying = nil
 local bedOccupyingData = nil
 
@@ -19,13 +17,11 @@ local getOutAnim = 'sleep_getup_rubeyes'
 ESX = nil
 
 Citizen.CreateThread(function()
-    while ESX == nil do 
-        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
-    end
+	while ESX == nil do
+		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+		Citizen.Wait(0)
+	end
 end)
-
---All Server events need to be written
 
 function PrintHelpText(message)
     SetTextComponentFormat("STRING")
@@ -33,7 +29,6 @@ function PrintHelpText(message)
     DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 end
 
--- Gets the player out of the bed
 function LeaveBed()
     RequestAnimDict(getOutDict)
     while not HasAnimDictLoaded(getOutDict) do
@@ -44,42 +39,42 @@ function LeaveBed()
     DestroyCam(cam, false)
 
     SetEntityHeading(PlayerPedId(), bedOccupyingData.h - 90)
-    TaskPlayAnim(PlayerPedId(), getOutDict, getOutAnim, 8.0, -8.0, -1, 0, 0, false, false, false)
+    TaskPlayAnim(PlayerPedId(), getOutDict , getOutAnim ,8.0, -8.0, -1, 0, 0, false, false, false )
     Citizen.Wait(5000)
-    CleadPedTasks(PlayerPedId())
+    ClearPedTasks(PlayerPedId())
     FreezeEntityPosition(PlayerPedId(), false)
-    TriggerServerEvent('bonefive:LeaveBed', bedOccupying)
+    TriggerServerEvent('bonefive:server:LeaveBed', bedOccupying)
 
     bedOccupying = nil
     bedOccupyingData = nil
 end
 
-RegisterNetEvent('bonefive:RCheckPos')
-AddEventHandler('bonefive:RCheckPos', function()
-    TriggerServerEvent('bonefive:RRequestBed', GetEntityCoords(PlayerPedId()))
+RegisterNetEvent('bonefive:client:RPCheckPos')
+AddEventHandler('bonefive:client:RPCheckPos', function()
+    TriggerServerEvent('bonefive:server:RPRequestBed', GetEntityCoords(PlayerPedId()))
 end)
 
-RegisterNetEvent('bonefive:RSendToBed')
-AddEventHandler('bonefive:RSendToBed', function(id, data)
+RegisterNetEvent('bonefive:client:RPSendToBed')
+AddEventHandler('bonefive:client:RPSendToBed', function(id, data)
     bedOccupying = id
     bedOccupyingData = data
 
     SetEntityCoords(PlayerPedId(), data.x, data.y, data.z - 0.5)
-
+    
     RequestAnimDict(inBedDict)
     while not HasAnimDictLoaded(inBedDict) do
         Citizen.Wait(0)
     end
 
-    TaskPlayAnim(PlayerPedId(), inBedDict, inBedAnim, 8.0, -8.0, -1, 1, 0, false, false, false)
+    TaskPlayAnim(PlayerPedId(), inBedDict , inBedAnim ,8.0, -8.0, -1, 1, 0, false, false, false )
     SetEntityHeading(PlayerPedId(), data.h + 180)
 
     cam = CreateCam("DEFAULT_SCRIPTED_CAMERA", 1)
     SetCamActive(cam, true)
     RenderScriptCams(true, false, 1, true, true)
-    AttachCamToPedBone(cam, PlayerPedId(), 31085, 0, 0, 1.0, true)
+    AttachCamToPedBone(cam, PlayerPedId(), 31085, 0, 0, 1.0 , true)
     SetCamFov(cam, 90.0)
-    SetCamRot(cam, -90.0, 0.0, GetEntityHeading(PlayerPedId()) + 180, true)
+    SetCamRot(cam, -90.0, 0.0, GetEntityHeading(PlayerPedId()) + 180, true)        
 
     Citizen.CreateThread(function()
         while bedOccupyingData ~= nil do
@@ -92,7 +87,8 @@ AddEventHandler('bonefive:RSendToBed', function(id, data)
     end)
 end)
 
-RegisterNetEvent('bonefive:SendToBed', function(id, data)
+RegisterNetEvent('bonefive:client:SendToBed')
+AddEventHandler('bonefive:client:SendToBed', function(id, data)
     bedOccupying = id
     bedOccupyingData = data
 
@@ -101,13 +97,13 @@ RegisterNetEvent('bonefive:SendToBed', function(id, data)
     while not HasAnimDictLoaded(inBedDict) do
         Citizen.Wait(0)
     end
-    TaskPlayAnim(PlayerPedId(), inBedDict, inBedAnim, 8.0, -8.0, -1, 1, 0, false, false, false)
+    TaskPlayAnim(PlayerPedId(), inBedDict , inBedAnim ,8.0, -8.0, -1, 1, 0, false, false, false )
     SetEntityHeading(PlayerPedId(), data.h + 180)
 
     cam = CreateCam("DEFAULT_SCRIPTED_CAMERA", 1)
     SetCamActive(cam, true)
     RenderScriptCams(true, false, 1, true, true)
-    AttachCamToPedBone(cam, PlayerPedId(), 31085, 0, 0, 1.0, true)
+    AttachCamToPedBone(cam, PlayerPedId(), 31085, 0, 0, 1.0 , true)
     SetCamFov(cam, 90.0)
     SetCamRot(cam, -90.0, 0.0, GetEntityHeading(PlayerPedId()) + 180, true)
 
@@ -115,27 +111,27 @@ RegisterNetEvent('bonefive:SendToBed', function(id, data)
         Citizen.Wait(5)
         local player = PlayerPedId()
 
-        exports['mythic_notify']:DoHudText('inform', 'You are being treated')
+        exports['mythic_notify']:DoHudText('inform', 'Doctors Are Treating You')
         Citizen.Wait(5000)
-        TriggerServerEvent('bonefive:EnteredBed')
+        TriggerServerEvent('bonefive:server:EnteredBed')
     end)
 end)
 
-RegisterNetEvent('bonefive:FinishServices')
-AddEventHandler('mythic_hospital:FinishServices', function()
-    SetEntityHealth(PlayerPedId(), GetEntityMaxHealth(PlayerPedId()))
-    TriggerEvent('bonefive:RemoveBleed')
-    TriggerEvent('bonefive:ResetLimbs')
-    exports['mythic_notify']:DoHudText('inform', 'You\'ve been treated & billed')
+RegisterNetEvent('bonefive:client:FinishServices')
+AddEventHandler('bonefive:client:FinishServices', function()
+	SetEntityHealth(PlayerPedId(), GetEntityMaxHealth(PlayerPedId()))
+    TriggerEvent('bonefive:client:RemoveBleed')
+    TriggerEvent('bonefive:client:ResetLimbs')
+    exports['mythic_notify']:DoHudText('inform', 'You\'ve Been Treated & Billed')
     LeaveBed()
 end)
 
-RegisterNetEvent('bonefive:ForceLeaveBed')
-AddEventHandler('bonefive:ForceLeaveBed', function()
+RegisterNetEvent('bonefive:client:ForceLeaveBed')
+AddEventHandler('bonefive:client:ForceLeaveBed', function()
     LeaveBed()
 end)
--- Disable The Native Auto-Heal
-SetPlayerHealthRechargeMultiplier(PlayerPedId(), 0.0)
+---Make Damage Persistant (Disable Auto-Heal)
+SetPlayerHealthRechargeMultiplier(PlayerId(), 0.0)
 
 Citizen.CreateThread(function()
     while true do
@@ -143,15 +139,15 @@ Citizen.CreateThread(function()
 			local plyCoords = GetEntityCoords(PlayerPedId(), 0)
             local distance = #(vector3(hospitalCheckin.x, hospitalCheckin.y, hospitalCheckin.z) - plyCoords)
             if distance < 10 then
-               --DrawMarker(27, hospitalCheckin.x, hospitalCheckin.y, hospitalCheckin.z - 0.99, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 1.0, 1, 157, 0, 155, false, false, 2, false, false, false, false)
+                --DrawMarker(27, hospitalCheckin.x, hospitalCheckin.y, hospitalCheckin.z - 0.99, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 1.0, 1, 157, 0, 155, false, false, 2, false, false, false, false)
 
                 if not IsPedInAnyVehicle(PlayerPedId(), true) then
                     if distance < 1 then
-                        --PrintHelpText('Press ~INPUT_CONTEXT~ ~s~to check in') -- Doesnt look as good
+                        --PrintHelpText('Press ~INPUT_CONTEXT~ ~s~to check in')
 			ESX.Game.Utils.DrawText3D(vector3(hospitalCheckin.x, hospitalCheckin.y, hospitalCheckin.z + 0.5), '[E] Check in', 0.4)
                         if IsControlJustReleased(0, 54) then
                             if (GetEntityHealth(PlayerPedId()) < 200) or (IsInjuredOrBleeding()) then
-                                exports['mythic_progbar']:Progress({
+                                TriggerEvent("mythic_progbar:client:progress", {
                                     name = "hospital_action",
                                     duration = 10500,
                                     label = "Checking In",
@@ -182,7 +178,7 @@ Citizen.CreateThread(function()
                                     },
                                 }, function(status)
                                     if not status then
-                                        TriggerServerEvent('bonefive:RequestBed')
+                                        TriggerServerEvent('bonefive:server:RequestBed')
                                     end
                                 end)
                             else

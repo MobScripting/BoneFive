@@ -1,4 +1,3 @@
---Config file coming soon
 local beds = {
     { x = 356.73, y = -585.71, z = 43.11, h = -20.0, taken = false },
     { x = 360.51, y = -586.66, z = 43.11, h = -20.0, taken = false },
@@ -26,45 +25,49 @@ AddEventHandler('playerDropped', function()
     end
 end)
 
-RegisterServerEvent('bonefive:RequestBed')
-AddEventHandler('bonefive:RequestBed', function()
+RegisterServerEvent('bonefive:server:RequestBed')
+AddEventHandler('bonefive:server:RequestBed', function()
     for k, v in pairs(beds) do
         if not v.taken then
             v.taken = true
             bedsTaken[source] = k
-            TriggerClientEvent('bonefive:SendToBed', source, k, v)
+            TriggerClientEvent('bonefive:client:SendToBed', source, k, v)
             return
         end
     end
 
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'No Beds Available'})
+    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'No Beds Available' })
 end)
 
-RegisterServerEvent('bonefive:RRequestBed')
-AddEventHandler('bonefive:RRequestBed', function(plyCoords)
+RegisterServerEvent('bonefive:server:RPRequestBed')
+AddEventHandler('bonefive:server:RPRequestBed', function(plyCoords)
     local foundbed = false
     for k, v in pairs(beds) do
         local distance = #(vector3(v.x, v.y, v.z) - plyCoords)
         if distance < 3.0 then
-            if not v.taken then v.taken = true
+            if not v.taken then
+                v.taken = true
                 foundbed = true
-                TriggerClientEvent('bonefive:RSendToBed', source, k, v)
+                TriggerClientEvent('bonefive:client:RPSendToBed', source, k, v)
                 return
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'That Bed Is Taken'})
+                --TriggerEvent('mythic_chat:server:System', source, 'That Bed Is Taken')
+		TriggerClientEvent('esx:showNotification', source, '~r~That Bed Is Taken')
             end
         end
     end
 
     if not foundbed then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'Not Near A Hospital Bed'})
+        --TriggerEvent('mythic_chat:server:System', source, 'Not Near A Hospital Bed')
+	TriggerClientEvent('esx:showNotification', source, '~r~Not Near A Hospital Bed')		
     end
 end)
 
-RegisterServerEvent('bonefive:EnteredBed')
-AddEventHandler('bonefive:EnteredBed', function()
+RegisterServerEvent('bonefive:server:EnteredBed')
+AddEventHandler('bonefive:server:EnteredBed', function()
     local src = source
     local injuries = GetCharsInjuries(src)
+
     local totalBill = injuryBasePrice
 
     if injuries ~= nil then
@@ -75,18 +78,18 @@ AddEventHandler('bonefive:EnteredBed', function()
         end
 
         if injuries.isBleeding > 0 then
-            totalBill = totalBill + (injuryBasePrice * v.isBleeding)
+            totalBill = totalBill + (injuryBasePrice * injuries.isBleeding)
         end
     end
 
-    -- Currently Uses ESX billing!
-    local xPlayer = ESX.GetPlayerFromId(src)
-    xPlayer.removeBank(totalBill)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'You Were Billed' .. totalBill .. 'For Medical Services & Expenses' })
-    TriggerClientEvent('bonefive:FinishServices', src)
+	-- YOU NEED TO IMPLEMENT YOUR FRAMEWORKS BILLING HERE
+	local xPlayer = ESX.GetPlayerFromId(src)
+	xPlayer.removeBank(totalBill)
+        TriggerClientEvent('esx:showNotification', src, '~w~You Were Billed For ~r~$' .. totalBill .. ' ~w~For Medical Services & Expenses')
+	TriggerClientEvent('bonefive:client:FinishServices', src)
 end)
 
-RegisterServerEvent('bonefive:LeaveBed')
-AddEventHandler('bonefive:LeaveBed', function(id)
-    bed[id].taken = false
+RegisterServerEvent('bonefive:server:LeaveBed')
+AddEventHandler('bonefive:server:LeaveBed', function(id)
+    beds[id].taken = false
 end)

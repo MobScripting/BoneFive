@@ -132,131 +132,131 @@ local parts = {
 
 local weapons = {
     --[[ Small Caliber ]]--
-    ['WEAPON_PISTOL'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_COMBATPISTOL'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_APPISTOL'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_COMBATPDW'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_MACHINEPISTOL'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_MICROSMG'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_MINISMG'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_PISTOL_MK2'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_SNSPISTOL'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_SNSPISTOL_MK2'] = WeaponClasses['SMALL_CALIBER'],
-    ['WEAPON_VINTAGEPISTOL'] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_PISTOL`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_COMBATPISTOL`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_APPISTOL`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_COMBATPDW`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_MACHINEPISTOL`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_MICROSMG`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_MINISMG`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_PISTOL_MK2`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_SNSPISTOL`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_SNSPISTOL_MK2`] = WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_VINTAGEPISTOL`] = WeaponClasses['SMALL_CALIBER'],
 
     --[[ Medium Caliber ]]--
-    ['WEAPON_ADVANCEDRIFLE'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_ASSAULTSMG'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_BULLPUPRIFLE'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_BULLPUPRIFLE_MK2'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_CARBINERIFLE'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_CARBINERIFLE_MK2'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_COMPACTRIFLE'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_DOUBLEACTION'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_GUSENBERG'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_HEAVYPISTOL'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_MARKSMANPISTOL'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_PISTOL50'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_REVOLVER'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_REVOLVER_MK2'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_SMG'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_SMG_MK2'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_SPECIALCARBINE'] = WeaponClasses['MEDIUM_CALIBER'],
-    ['WEAPON_SPECIALCARBINE_MK2'] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_ADVANCEDRIFLE`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_ASSAULTSMG`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_BULLPUPRIFLE`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_BULLPUPRIFLE_MK2`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_CARBINERIFLE`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_CARBINERIFLE_MK2`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_COMPACTRIFLE`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_DOUBLEACTION`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_GUSENBERG`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_HEAVYPISTOL`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_MARKSMANPISTOL`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_PISTOL50`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_REVOLVER`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_REVOLVER_MK2`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_SMG`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_SMG_MK2`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_SPECIALCARBINE`] = WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_SPECIALCARBINE_MK2`] = WeaponClasses['MEDIUM_CALIBER'],
 
     --[[ High Caliber ]]--
-    ['WEAPON_ASSAULTRIFLE'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_ASSAULTRIFLE_MK2'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_COMBATMG'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_COMBATMG_MK2'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_HEAVYSNIPER'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_HEAVYSNIPER_MK2'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_MARKSMANRIFLE'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_MARKSMANRIFLE_MK2'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_MG'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_MINIGUN'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_MUSKET'] = WeaponClasses['HIGH_CALIBER'],
-    ['WEAPON_RAILGUN'] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_ASSAULTRIFLE`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_ASSAULTRIFLE_MK2`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_COMBATMG`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_COMBATMG_MK2`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_HEAVYSNIPER`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_HEAVYSNIPER_MK2`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_MARKSMANRIFLE`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_MARKSMANRIFLE_MK2`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_MG`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_MINIGUN`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_MUSKET`] = WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_RAILGUN`] = WeaponClasses['HIGH_CALIBER'],
 
     --[[ Shotguns ]]--
-    ['WEAPON_ASSAULTSHOTGUN'] = WeaponClasses['SHOTGUN'],
-    ['WEAPON_BULLUPSHOTGUN'] = WeaponClasses['SHOTGUN'],
-    ['WEAPON_DBSHOTGUN'] = WeaponClasses['SHOTGUN'],
-    ['WEAPON_HEAVYSHOTGUN'] = WeaponClasses['SHOTGUN'],
-    ['WEAPON_PUMPSHOTGUN'] = WeaponClasses['SHOTGUN'],
-    ['WEAPON_PUMPSHOTGUN_MK2'] = WeaponClasses['SHOTGUN'],
-    ['WEAPON_SAWNOFFSHOTGUN'] = WeaponClasses['SHOTGUN'],
-    ['WEAPON_SWEEPERSHOTGUN'] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_ASSAULTSHOTGUN`] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_BULLUPSHOTGUN`] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_DBSHOTGUN`] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_HEAVYSHOTGUN`] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_PUMPSHOTGUN`] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_PUMPSHOTGUN_MK2`] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_SAWNOFFSHOTGUN`] = WeaponClasses['SHOTGUN'],
+    [`WEAPON_SWEEPERSHOTGUN`] = WeaponClasses['SHOTGUN'],
 
     --[[ Animals ]]--
-    ['WEAPON_ANIMAL'] = WeaponClasses['WILDLIFE'], -- Animal
-    ['WEAPON_COUGAR'] = WeaponClasses['WILDLIFE'], -- Cougar
-    ['WEAPON_BARBED_WIRE'] = WeaponClasses['WILDLIFE'], -- Barbed Wire
+    [`WEAPON_ANIMAL`] = WeaponClasses['WILDLIFE'], -- Animal
+    [`WEAPON_COUGAR`] = WeaponClasses['WILDLIFE'], -- Cougar
+    [`WEAPON_BARBED_WIRE`] = WeaponClasses['WILDLIFE'], -- Barbed Wire
     
     --[[ Cutting Weapons ]]--
-    ['WEAPON_BATTLEAXE'] = WeaponClasses['CUTTING'],
-    ['WEAPON_BOTTLE'] = WeaponClasses['CUTTING'],
-    ['WEAPON_DAGGER'] = WeaponClasses['CUTTING'],
-    ['WEAPON_HATCHET'] = WeaponClasses['CUTTING'],
-    ['WEAPON_KNIFE'] = WeaponClasses['CUTTING'],
-    ['WEAPON_MACHETE'] = WeaponClasses['CUTTING'],
-    ['WEAPON_SWITCHBLADE'] = WeaponClasses['CUTTING'],
+    [`WEAPON_BATTLEAXE`] = WeaponClasses['CUTTING'],
+    [`WEAPON_BOTTLE`] = WeaponClasses['CUTTING'],
+    [`WEAPON_DAGGER`] = WeaponClasses['CUTTING'],
+    [`WEAPON_HATCHET`] = WeaponClasses['CUTTING'],
+    [`WEAPON_KNIFE`] = WeaponClasses['CUTTING'],
+    [`WEAPON_MACHETE`] = WeaponClasses['CUTTING'],
+    [`WEAPON_SWITCHBLADE`] = WeaponClasses['CUTTING'],
 
     --[[ Light Impact ]]--
-    ['WEAPON_GARBAGEBAG'] = WeaponClasses['WILDLIFE'], -- Garbage Bag
-    ['WEAPON_BRIEFCASE'] = WeaponClasses['WILDLIFE'], -- Briefcase
-    ['WEAPON_BRIEFCASE_02'] = WeaponClasses['WILDLIFE'], -- Briefcase 2
-    ['WEAPON_BALL'] = WeaponClasses['LIGHT_IMPACT'],
-    ['WEAPON_FLASHLIGHT'] = WeaponClasses['LIGHT_IMPACT'],
-    ['WEAPON_KNUCKLE'] = WeaponClasses['LIGHT_IMPACT'],
-    ['WEAPON_NIGHTSTICK'] = WeaponClasses['LIGHT_IMPACT'],
-    ['WEAPON_SNOWBALL'] = WeaponClasses['LIGHT_IMPACT'],
-    ['WEAPON_UNARMED'] = WeaponClasses['LIGHT_IMPACT'],
-    ['WEAPON_PARACHUTE'] = WeaponClasses['LIGHT_IMPACT'],
-    ['WEAPON_NIGHTVISION'] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_GARBAGEBAG`] = WeaponClasses['WILDLIFE'], -- Garbage Bag
+    [`WEAPON_BRIEFCASE`] = WeaponClasses['WILDLIFE'], -- Briefcase
+    [`WEAPON_BRIEFCASE_02`] = WeaponClasses['WILDLIFE'], -- Briefcase 2
+    [`WEAPON_BALL`] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_FLASHLIGHT`] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_KNUCKLE`] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_NIGHTSTICK`] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_SNOWBALL`] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_UNARMED`] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_PARACHUTE`] = WeaponClasses['LIGHT_IMPACT'],
+    [`WEAPON_NIGHTVISION`] = WeaponClasses['LIGHT_IMPACT'],
     
     --[[ Heavy Impact ]]--
-    ['WEAPON_BAT'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_CROWBAR'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_FIREEXTINGUISHER'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_FIRWORK'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_GOLFLCUB'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_HAMMER'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_PETROLCAN'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_POOLCUE'] = WeaponClasses['HEAVY_IMPACT'],
-    ['WEAPON_WRENCH'] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_BAT`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_CROWBAR`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_FIREEXTINGUISHER`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_FIRWORK`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_GOLFLCUB`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_HAMMER`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_PETROLCAN`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_POOLCUE`] = WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_WRENCH`] = WeaponClasses['HEAVY_IMPACT'],
     
     --[[ Explosives ]]--
-    ['WEAPON_EXPLOSION'] = WeaponClasses['EXPLOSIVE'], -- Explosion
-    ['WEAPON_GRENADE'] = WeaponClasses['EXPLOSIVE'],
-    ['WEAPON_COMPACTLAUNCHER'] = WeaponClasses['EXPLOSIVE'],
-    ['WEAPON_HOMINGLAUNCHER'] = WeaponClasses['EXPLOSIVE'],
-    ['WEAPON_PIPEBOMB'] = WeaponClasses['EXPLOSIVE'],
-    ['WEAPON_PROXMINE'] = WeaponClasses['EXPLOSIVE'],
-    ['WEAPON_RPG'] = WeaponClasses['EXPLOSIVE'],
-    ['WEAPON_STICKYBOMB'] = WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_EXPLOSION`] = WeaponClasses['EXPLOSIVE'], -- Explosion
+    [`WEAPON_GRENADE`] = WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_COMPACTLAUNCHER`] = WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_HOMINGLAUNCHER`] = WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_PIPEBOMB`] = WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_PROXMINE`] = WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_RPG`] = WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_STICKYBOMB`] = WeaponClasses['EXPLOSIVE'],
     
     --[[ Other ]]--
-    ['WEAPON_FALL'] = WeaponClasses['OTHER'], -- Fall
-    ['WEAPON_HIT_BY_WATER_CANNON'] = WeaponClasses['OTHER'], -- Water Cannon
-    ['WEAPON_RAMMED_BY_CAR'] = WeaponClasses['OTHER'], -- Rammed
-    ['WEAPON_RUN_OVER_BY_CAR'] = WeaponClasses['OTHER'], -- Ran Over
-    ['WEAPON_HELI_CRASH'] = WeaponClasses['OTHER'], -- Heli Crash
-    ['WEAPON_STUNGUN'] = WeaponClasses['OTHER'],
+    [`WEAPON_FALL`] = WeaponClasses['OTHER'], -- Fall
+    [`WEAPON_HIT_BY_WATER_CANNON`] = WeaponClasses['OTHER'], -- Water Cannon
+    [`WEAPON_RAMMED_BY_CAR`] = WeaponClasses['OTHER'], -- Rammed
+    [`WEAPON_RUN_OVER_BY_CAR`] = WeaponClasses['OTHER'], -- Ran Over
+    [`WEAPON_HELI_CRASH`] = WeaponClasses['OTHER'], -- Heli Crash
+    [`WEAPON_STUNGUN`] = WeaponClasses['OTHER'],
     
     --[[ Fire ]]--
-    ['WEAPON_ELECTRIC_FENCE'] = WeaponClasses['FIRE'], -- Electric Fence 
-    ['WEAPON_FIRE'] = WeaponClasses['FIRE'], -- Fire
-    ['WEAPON_MOLOTOV'] = WeaponClasses['FIRE'],
-    ['WEAPON_FLARE'] = WeaponClasses['FIRE'],
-    ['WEAPON_FLAREGUN'] = WeaponClasses['FIRE'],
+    [`WEAPON_ELECTRIC_FENCE`] = WeaponClasses['FIRE'], -- Electric Fence 
+    [`WEAPON_FIRE`] = WeaponClasses['FIRE'], -- Fire
+    [`WEAPON_MOLOTOV`] = WeaponClasses['FIRE'],
+    [`WEAPON_FLARE`] = WeaponClasses['FIRE'],
+    [`WEAPON_FLAREGUN`] = WeaponClasses['FIRE'],
 
     --[[ Suffocate ]]--
-    ['WEAPON_DROWNING'] = WeaponClasses['SUFFOCATING'], -- Drowning
-    ['WEAPON_DROWNING_IN_VEHICLE'] = WeaponClasses['SUFFOCATING'], -- Drowning Veh
-    ['WEAPON_EXHAUSTION'] = WeaponClasses['SUFFOCATING'], -- Exhaust
-    ['WEAPON_BZGAS'] = WeaponClasses['SUFFOCATING'],
-    ['WEAPON_SMOKEGRENADE'] = WeaponClasses['SUFFOCATING'],
+    [`WEAPON_DROWNING`] = WeaponClasses['SUFFOCATING'], -- Drowning
+    [`WEAPON_DROWNING_IN_VEHICLE`] = WeaponClasses['SUFFOCATING'], -- Drowning Veh
+    [`WEAPON_EXHAUSTION`] = WeaponClasses['SUFFOCATING'], -- Exhaust
+    [`WEAPON_BZGAS`] = WeaponClasses['SUFFOCATING'],
+    [`WEAPON_SMOKEGRENADE`] = WeaponClasses['SUFFOCATING'],
 }
 
 local injured = {}
@@ -435,8 +435,8 @@ function CheckDamage(ped, bone, weapon)
                 label = BodyParts[parts[bone]].label,
                 severity = BodyParts[parts[bone]].severity
             })
-            --Server Event to be written
-            TriggerServerEvent('bonefive:SyncInjuries', {
+
+            TriggerServerEvent('bonefive:server:SyncInjuries', {
                 limbs = BodyParts,
                 isBleeding = tonumber(isBleeding)
             })
@@ -455,7 +455,7 @@ function CheckDamage(ped, bone, weapon)
 
             if BodyParts[parts[bone]].severity < 4 then
                 BodyParts[parts[bone]].severity = BodyParts[parts[bone]].severity + 1
-                TriggerServerEvent('bonefive:SyncInjuries', {
+                TriggerServerEvent('bonefive:server:SyncInjuries', {
                     limbs = BodyParts,
                     isBleeding = tonumber(isBleeding)
                 })
@@ -476,13 +476,13 @@ function CheckDamage(ped, bone, weapon)
     end
 end
 
-RegisterNetEvent('bonefive:SyncBleed')
-AddEventHandler('bonefive:SyncBleed', function(bleedStatus)
+RegisterNetEvent('bonefive:client:SyncBleed')
+AddEventHandler('bonefive:client:SyncBleed', function(bleedStatus)
     isBleeding = tonumber(bleedStatus)
 end)
 
-RegisterNetEvent('bonefive:FieldTreatLimbs')
-AddEventHandler('bonefive:FieldTreatLimbs', function()
+RegisterNetEvent('bonefive:client:FieldTreatLimbs')
+AddEventHandler('bonefive:client:FieldTreatLimbs', function()
     for k, v in pairs(BodyParts) do
         v.isDamaged = false
         v.severity = 1
@@ -495,8 +495,8 @@ AddEventHandler('bonefive:FieldTreatLimbs', function()
     end
 end)
 
-RegisterNetEvent('bonefive:ResetLimbs')
-AddEventHandler('bonefive:ResetLimbs', function()
+RegisterNetEvent('bonefive:client:ResetLimbs')
+AddEventHandler('bonefive:client:ResetLimbs', function()
     for k, v in pairs(BodyParts) do
         v.isDamaged = false
         v.severity = 0
@@ -505,20 +505,27 @@ AddEventHandler('bonefive:ResetLimbs', function()
     injured = {}
 end)
 
-RegisterNetEvent('bonefive:ReduceBleed')
-AddEventHandler('bonefive:ReduceBleed', function()
+RegisterNetEvent('bonefive:client:FieldTreatBleed')
+AddEventHandler('bonefive:client:FieldTreatBleed', function()
+    if isBleeding > 1 then
+        isBleeding = tonumber(isBleeding) - 1
+    end
+end)
+
+RegisterNetEvent('bonefive:client:ReduceBleed')
+AddEventHandler('bonefive:client:ReduceBleed', function()
     if isBleeding > 0 then
         isBleeding = tonumber(isBleeding) - 1
     end
 end)
 
-RegisterNetEvent('bonefive:RemoveBleed')
-AddEventHandler('bonefive:RemoveBleed', function()
+RegisterNetEvent('bonefive:client:RemoveBleed')
+AddEventHandler('bonefive:client:RemoveBleed', function()
     isBleeding = 0
 end)
 
-RegisterNetEvent('bonefive:UsePainKiller')
-AddEventHandler('bonefive:UsePainKiller', function(tier)
+RegisterNetEvent('bonefive:client:UsePainKiller')
+AddEventHandler('bonefive:client:UsePainKiller', function(tier)
     if tier < 4 then
         onPainKiller = 90 * tier
     end
@@ -526,89 +533,91 @@ AddEventHandler('bonefive:UsePainKiller', function(tier)
     exports['mythic_notify']:DoCustomHudText('inform', 'You feel the pain subside temporarily', 5000)
 end)
 
-RegisterNetEvent('bonefive:UseAdrenaline')
-AddEventHandler('bonefive:UseAdrenalinbe', function(tier)
+RegisterNetEvent('bonefive:client:UseAdrenaline')
+AddEventHandler('bonefive:client:UseAdrenaline', function(tier)
     if tier < 4 then
         onDrugs = 180 * tier
     end
 
-    exports['mythic_notify']:DoCustomHudText('inform', 'You\'re Able To Ignore Your Body Failing Miserably ', 5000)
+    exports['mythic_notify']:DoCustomHudText('inform', 'You\'re Able To Ignore Your Body Failing', 5000)
+end)  
+    
+Citizen.CreateThread(function()
+    local player = PlayerPedId()
+	while true do
+		if not IsEntityDead(player) and not (#injured == 0) then
+			if #injured > 0 then
+				local str = ''
+				if #injured > 1 and #injured < 3 then
+					for k, v in pairs(injured) do
+						str = str .. 'Your ' .. v.label .. ' feels ' .. WoundStates[v.severity]
+						if k < #injured then
+							str = str .. ' | '
+						end
+					end
+				elseif #injured > 2 then
+					str = 'You Feel Multiple Pains'
+				else
+					str = 'Your ' .. injured[1].label .. ' feels ' .. WoundStates[injured[1].severity]
+				end
+		
+				exports['mythic_notify']:DoCustomHudText('inform', str, 15000)
+			end
+
+			if isBleeding > 0 then
+				if blackoutTimer >= 10 then
+					exports['mythic_notify']:DoCustomHudText('inform', 'You Suddenly Black Out', 5000)
+					SetFlash(0, 0, 100, 7000, 100)
+						
+					DoScreenFadeOut(500)
+					while not IsScreenFadedOut() do
+						Citizen.Wait(0)
+					end
+			
+					if not IsPedRagdoll(player) and IsPedOnFoot(player) and not IsPedSwimming(player) then
+						ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08) -- change this float to increase/decrease camera shake
+						SetPedToRagdollWithFall(PlayerPedId(), 10000, 12000, 1, GetEntityForwardVector(player), 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+					end
+			
+					Citizen.Wait(5000)
+					DoScreenFadeIn(500)
+					blackoutTimer = 0
+				end
+			
+				if isBleeding == 1 then
+					SetFlash(0, 0, 100, 100, 100)
+				elseif isBleeding == 2 then
+					SetFlash(0, 0, 100, 250, 100)
+				elseif isBleeding == 3 then
+					SetFlash(0, 0, 100, 500, 100)
+					--Function.Call(Hash.SET_FLASH, 0, 0, 100, 500, 100);
+				elseif isBleeding == 4 then
+					SetFlash(0, 0, 100, 500, 100)
+					--Function.Call(Hash.SET_FLASH, 0, 0, 100, 500, 100);
+				end
+				exports['mythic_notify']:DoCustomHudText('inform', 'You Have ' .. BleedingStates[isBleeding], 25000)
+                local bleedDamage = tonumber(isBleeding) * 4
+                ApplyDamageToPed(player, bleedDamage, false)
+                playerHealth = playerHealth - bleedDamage
+				blackoutTimer = blackoutTimer + 1
+				advanceBleedTimer = advanceBleedTimer + 1
+			
+				if advanceBleedTimer >= 10 then
+					if isBleeding < 4 then
+						isBleeding = tonumber(isBleeding) + 1
+					end
+					advanceBleedTimer = 0
+				end
+			end
+		end
+
+		Citizen.Wait(30000)
+	end
 end)
 
 Citizen.CreateThread(function()
     local player = PlayerPedId()
-    while true do
-        if not IsEntityDead(player) and not (#injured == 0) then
-            if #injured > 0 then
-                local str = ''
-                if #injured > 1 and #injured < 3 then
-                    for k, v in pairs(injured) do
-                        str = str .. 'Your ' .. v.label .. ' feels ' .. WoundStates[v.severity]
-                        if k < #injured then
-                            str = str .. ' | '
-                        end
-                    end
-                elseif #injured > 2 then
-                    str = 'You Feel Multiple Pains'
-                else
-                    str = 'Your ' .. injured[1].label .. ' feels ' .. WoundStates[injured[1].severity]
-                end
-
-                exports['mythic_notify']:DoCustomHudText('inform', str, 15000)
-            end
-
-            if isBleeding > 0 then
-                if blackoutTimer >= 10 then
-                    exports['mythic_notify']:DoCustomHudText('inform', 'You Suddenly Black Out', 5000)
-                    SetFlash(0, 0, 100, 7000, 100)
-
-                    DoScreenFadeOut(500)
-                    while not IsScreenFadedOut() do
-                        Citizen.Wait(0)
-                    end
-
-                    if not IsPedRagdoll(player) and IsPedOnFoot(player) and not IsPedSwimming(player) then
-                        ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08) --Change the number to increase/decrease how violently the camera shakes
-                        SetPedToRagdoll(PlayerPedId(), 10000, 12000, 1, GetEntityForwardVector(player), 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-                    end
-
-                    Citizen.Wait(5000)
-                    DoScreenFadeIn(500)
-                    blackoutTimer = 0
-                end
-
-                if isBleeding == 1 then
-                    SetFlash(0, 0, 100, 100, 100)
-                elseif isBleeding == 2 then
-                    SetFlash(0, 0, 100, 250, 100)
-                elseif isBleeding == 3 then
-                    SetFlash(0, 0, 100, 500, 100)
-                elseif isBleeding == 4 then
-                    SetFlash(0, 0, 100, 500, 100)
-                end
-                exports['mythic_notify']:DoCustomHudText('inform', ' You Have ' .. BleedingStates[isBleeding], 25000)
-                local bleedDamage = tonumber(isBleeding) * 4
-                ApplyDamageToPed(player, bleedDamage, false)
-                playerHealth = playerHealth - bleedDamage
-                blackoutTimer = blackoutTimmer + 1
-                advanceBleedTimer = advanceBleedTimer + 1
-
-                if advanceBleedTimer >= 10 then
-                    if isBleeding < 4 then
-                        isBleeding = tonumber(isBleeding) + 1
-                    end
-                    advanceBleedTimer = 0
-                end
-            end
-        end
-
-        Citizne.Wait(30000)
-    end
-end)
-
-Citizne.CreateThread(function()
-    local player = PlayerPedId()
-
+    
     while true do
         local ped = PlayerPedId()
         local health = GetEntityHealth(ped)
@@ -628,9 +637,9 @@ Citizne.CreateThread(function()
             playerArmour = armour
         end
 
-        local armourDamaged = (playerArmour ~= armour and armour < playerArmour and armour > 0) -- Armour was damaged
-        local healthDamaged = (playerHealth ~= health and health < playerHealth) -- Player took damaged
-
+        local armourDamaged = (playerArmour ~= armour and armour < playerArmour and armour > 0) -- Players armour was damaged
+        local healthDamaged = (playerHealth ~= health and health < playerHealth) -- Players health was damaged
+        
         if armourDamaged or healthDamaged then
             local hit, bone = GetPedLastDamageBone(player)
             local bodypart = parts[bone]
@@ -640,7 +649,7 @@ Citizne.CreateThread(function()
                 local weapon = GetDamagingWeapon(player)
                 if weapon ~= nil then
                     if armourDamaged and (bodypart == 'SPINE' or bodypart == 'LOWER_BODY') and weapon <= WeaponClasses['LIGHT_IMPACT'] and weapon ~= WeaponClasses['NOTHING'] then
-                        checkDamage = false
+                        checkDamage = false -- Don't check damage if the it was a body shot and the weapon class isn't that strong
                     end
 
                     if checkDamage then
@@ -654,10 +663,10 @@ Citizne.CreateThread(function()
         playerArmour = armour
         Citizen.Wait(333)
 
-        ProcessRunStuff(player)
-        Citizen.Wait(333)
+		ProcessRunStuff(player)
+		Citizen.Wait(333)
 
-        ProcessDamage(player)
-        Citizen.Wait(333)
-    end
+		ProcessDamage(player)
+		Citizen.Wait(333)
+	end
 end)

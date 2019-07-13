@@ -5,7 +5,7 @@ description 'BoneFive Injury System'
 version '0.0.1'
 
 client_scripts {
-	'client/wound.lua',
+	'client/wounds.lua',
 	'client/main.lua',
 	'client/items.lua',
 }
@@ -17,7 +17,7 @@ server_scripts {
 }
 
 dependencies {
-	'mythic_progressbar',
+	'mythic_progbar',
 	'mythic_notify',
 }
 

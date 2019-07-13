@@ -1,14 +1,14 @@
-RegisterNetEvent("bonefive:gauze")
-AddEventHandler("bonefive:gauze", function(item)
-    exports['mythic_progbar']:Progress({
+RegisterNetEvent("bonefive:items:gauze")
+AddEventHandler("bonefive:items:gauze", function(item)
+    TriggerEvent("mythic_progbar:client:progress", {
         name = "firstaid_action",
         duration = 3000,
         label = "Packing Wounds",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
-            disableMovement = true,
-            disableCarMovement = true,
+            disableMovement = false,
+            disableCarMovement = false,
             disableMouse = false,
             disableCombat = true,
         },
@@ -22,22 +22,22 @@ AddEventHandler("bonefive:gauze", function(item)
         }
     }, function(status)
         if not status then
-            TriggerEvent('bonefive:RemoveBleed')
+            TriggerEvent('bonefive:client:FieldTreatBleed')
         end
     end)
 end)
 
-RegisterNetEvent("bonefive:bandage")
-AddEventHandler("bonefiv:bandage", function(item)
-    exports['mythic_progbar']:Progress({
+RegisterNetEvent("bonefive:items:bandage")
+AddEventHandler("bonefive:items:bandage", function(item)
+    TriggerEvent("mythic_progbar:client:progress", {
         name = "firstaid_action",
         duration = 5000,
         label = "Using Bandage",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
-            disableMovement = true,
-            disableCarMovement = true,
+            disableMovement = false,
+            disableCarMovement = false,
             disableMouse = false,
             disableCombat = true,
         },
@@ -47,30 +47,29 @@ AddEventHandler("bonefiv:bandage", function(item)
             flags = 49,
         },
         prop = {
-            model = "prop_paper_bad_small",
+            model = "prop_paper_bag_small",
         }
     }, function(status)
         if not status then
-            local maxHealth = GetEntityMaxHealth(PlayerPedId())
-            local health = GetEntityHealth(PlayerPedId())
-            local newHealth = math.min(maxHealth, math.floor(health + maxHealth / 16))
-            SetEntityHealth(PlayerPedId(), newHealth)
-            TriggerEvent('bonefive:ReduceBleed')
+			local maxHealth = GetEntityMaxHealth(PlayerPedId())
+			local health = GetEntityHealth(PlayerPedId())
+			local newHealth = math.min(maxHealth, math.floor(health + maxHealth / 16))
+			SetEntityHealth(PlayerPedId(), newHealth)
         end
     end)
 end)
 
-RegisterNetEvent("bonefive:firstaid")
-AddEventHandler("bonefive:firstaid", function(item)
-    exports['mythic_progbar']:Progress({
+RegisterNetEvent("bonefive:items:firstaid")
+AddEventHandler("bonefive:items:firstaid", function(item)
+    TriggerEvent("mythic_progbar:client:progress", {
         name = "firstaid_action",
         duration = 10000,
         label = "Using First Aid",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
-            disableMovement = true,
-            disableCarMovement = true,
+            disableMovement = false,
+            disableCarMovement = false,
             disableMouse = false,
             disableCombat = true,
         },
@@ -84,27 +83,25 @@ AddEventHandler("bonefive:firstaid", function(item)
         },
     }, function(status)
         if not status then
-            local maxHealth = GetEntityMaxHealth(PlayerPedId())
-            local health = GetEntityHealth(PlayerPedId())
-            local newHealth = math.min(maxHealth, math.floor(health + maxHealth / 8))
-            SetEntityHealth(PlayerPedId(), newHealth)
-            TriggerEvent('bonefive:FieldTreatLimbs')
-            TriggerEvent('bonefive:RemoveBleed')
+			local maxHealth = GetEntityMaxHealth(PlayerPedId())
+			local health = GetEntityHealth(PlayerPedId())
+			local newHealth = math.min(maxHealth, math.floor(health + maxHealth / 8))
+			SetEntityHealth(PlayerPedId(), newHealth)
         end
     end)
 end)
 
-RegisterNetEvent("bonefive:medkit")
-AddEventHandler("bonefive:medkit", function(item)
-    exports['mythic_progbar']:Progress({
+RegisterNetEvent("bonefive:items:medkit")
+AddEventHandler("bonefive:items:medkit", function(item)
+    TriggerEvent("mythic_progbar:client:progress", {
         name = "firstaid_action",
         duration = 20000,
         label = "Using Medkit",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
-            disableMovement = true,
-            disableCarMovement = true,
+            disableMovement = false,
+            disableCarMovement = false,
             disableMouse = false,
             disableCombat = true,
         },
@@ -119,23 +116,22 @@ AddEventHandler("bonefive:medkit", function(item)
     }, function(status)
         if not status then
 			SetEntityHealth(PlayerPedId(), GetEntityMaxHealth(PlayerPedId()))
-            TriggerEvent('bonefive:FieldTreatLimbs')
-            TriggerEvent('bonefive:RemoveBleed')
+            TriggerEvent('bonefive:client:FieldTreatLimbs')
         end
     end)
 end)
 
-RegisterNetEvent("bonefive:vicodin")
-AddEventHandler("bonefive:vicodin", function(item)
-    exports['mythic_progbar']:Progress({
+RegisterNetEvent("bonefive:items:vicodin")
+AddEventHandler("bonefive:items:vicodin", function(item)
+    TriggerEvent("mythic_progbar:client:progress", {
         name = "firstaid_action",
         duration = 2000,
         label = "Taking vicodin",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
-            disableMovement = true,
-            disableCarMovement = true,
+            disableMovement = false,
+            disableCarMovement = false,
             disableMouse = false,
             disableCombat = true,
         },
@@ -152,22 +148,22 @@ AddEventHandler("bonefive:vicodin", function(item)
         },
     }, function(status)
         if not status then
-            TriggerEvent('bonefive:UsePainKiller', 1)
+            TriggerEvent('bonefive:client:UsePainKiller', 1)
         end
     end)
 end)
 
-RegisterNetEvent("bonefive:hydrocodone")
-AddEventHandler("bonefive:hydrocodone", function(item)
-    exports['mythic_progbar']:Progress({
+RegisterNetEvent("bonefive:items:hydrocodone")
+AddEventHandler("bonefive:items:hydrocodone", function(item)
+    TriggerEvent("mythic_progbar:client:progress", {
         name = "firstaid_action",
         duration = 2000,
         label = "Taking hydrocodone",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
-            disableMovement = true,
-            disableCarMovement = true,
+            disableMovement = false,
+            disableCarMovement = false,
             disableMouse = false,
             disableCombat = true,
         },
@@ -184,22 +180,22 @@ AddEventHandler("bonefive:hydrocodone", function(item)
         },
     }, function(status)
         if not status then
-            TriggerEvent('bonefive:UsePainKiller', 2)
+            TriggerEvent('bonefive:client:UsePainKiller', 2)
         end
     end)
 end)
 
-RegisterNetEvent("bonefive:morphine")
-AddEventHandler("bonefive:morphine", function(item)
-    exports['mythic_progbar']:Progress({
+RegisterNetEvent("bonefive:items:morphine")
+AddEventHandler("bonefive:items:morphine", function(item)
+    TriggerEvent("mythic_progbar:client:progress", {
         name = "firstaid_action",
         duration = 2000,
         label = "Taking morphine",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
-            disableMovement = true,
-            disableCarMovement = true,
+            disableMovement = false,
+            disableCarMovement = false,
             disableMouse = false,
             disableCombat = true,
         },
@@ -216,8 +212,7 @@ AddEventHandler("bonefive:morphine", function(item)
         },
     }, function(status)
         if not status then
-            TriggerEvent('bonefive:UsePainKiller', 6)
-            TriggerEvent('bonefive:UserAdrenaline', 3)
+            TriggerEvent('bonefive:client:UsePainKiller', 6)
         end
     end)
 end)
