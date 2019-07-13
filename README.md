@@ -17,7 +17,7 @@ Features to come:
 2. ----
 
 Known Issues:
-1. Items do not actually help with injuries (Will be fixed next patch)
+1. Disabling the Auto-Heal only works when moving
 
 Installation:
 1. Import SQL(REQUIRED)
