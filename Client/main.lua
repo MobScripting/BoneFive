@@ -131,7 +131,7 @@ AddEventHandler('bonefive:client:ForceLeaveBed', function()
     LeaveBed()
 end)
 ---Make Damage Persistant (Disable Auto-Heal)
-SetPlayerHealthRechargeMultiplier(PlayerId(), 0.0)
+SetPlayerHealthRechargeMultiplier(PlayerId(0), 0.0)
 
 Citizen.CreateThread(function()
     while true do
