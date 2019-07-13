@@ -22,6 +22,7 @@ AddEventHandler("bonefive:items:gauze", function(item)
         }
     }, function(status)
         if not status then
+            TriggerEvent('bonefive:client:RemoveBleed')
             TriggerEvent('bonefive:client:FieldTreatBleed')
         end
     end)
@@ -54,7 +55,8 @@ AddEventHandler("bonefive:items:bandage", function(item)
 			local maxHealth = GetEntityMaxHealth(PlayerPedId())
 			local health = GetEntityHealth(PlayerPedId())
 			local newHealth = math.min(maxHealth, math.floor(health + maxHealth / 16))
-			SetEntityHealth(PlayerPedId(), newHealth)
+            SetEntityHealth(PlayerPedId(), newHealth)
+            TriggerEvent('bonefive:client:ReduceBleed')
         end
     end)
 end)
@@ -86,7 +88,8 @@ AddEventHandler("bonefive:items:firstaid", function(item)
 			local maxHealth = GetEntityMaxHealth(PlayerPedId())
 			local health = GetEntityHealth(PlayerPedId())
 			local newHealth = math.min(maxHealth, math.floor(health + maxHealth / 8))
-			SetEntityHealth(PlayerPedId(), newHealth)
+            SetEntityHealth(PlayerPedId(), newHealth)
+            TriggerEvent('bonefive:client:FieldTreatLimbs')
         end
     end)
 end)
@@ -117,6 +120,7 @@ AddEventHandler("bonefive:items:medkit", function(item)
         if not status then
 			SetEntityHealth(PlayerPedId(), GetEntityMaxHealth(PlayerPedId()))
             TriggerEvent('bonefive:client:FieldTreatLimbs')
+            TriggerEvent('bonefive:client:ResetLimbs')
         end
     end)
 end)
@@ -213,6 +217,7 @@ AddEventHandler("bonefive:items:morphine", function(item)
     }, function(status)
         if not status then
             TriggerEvent('bonefive:client:UsePainKiller', 6)
+            TriggerEvent('bonefive:client:UseAdrenaline', 2)
         end
     end)
 end)
