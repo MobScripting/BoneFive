@@ -9,12 +9,15 @@ Dependencies:
 2. https://github.com/mythicrp/mythic_progbar
 
 Features:
-1. Injuries
+1. In-Depth Injuries
 2. Side effects from injuries
 
 Features to come:
 1. Ability for EMS to heal injuries
 2. ----
+
+Known Issues:
+1. Items do not actually help with injuries (Will be fixed next patch)
 
 Installation:
 1. Import SQL(REQUIRED)
