@@ -349,7 +349,7 @@ function ProcessDamage(ped)
                             end
                         else
                             if chance <= 15 then
-                                exports['mythic_notify']:DoCustomHudText('inform', 'You\'re Having A Hard Using Your Legs', 5000)
+                                exports['mythic_notify']:DoCustomHudText('inform', 'You\'re Having A Hard time Using Your Legs', 5000)
                                 ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08) -- change this float to increase/decrease camera shake
                                 SetPedToRagdollWithFall(PlayerPedId(), 1500, 2000, 1, GetEntityForwardVector(ped), 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
                             end
