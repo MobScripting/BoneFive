@@ -23,6 +23,13 @@ Citizen.CreateThread(function()
 	end
 end)
 
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0)
+        SetPlayerHealthRechargeMultiplier(PlayerId(0), 0.0)
+    end
+end)
+
 function PrintHelpText(message)
     SetTextComponentFormat("STRING")
     AddTextComponentString(message)
@@ -130,8 +137,7 @@ RegisterNetEvent('bonefive:client:ForceLeaveBed')
 AddEventHandler('bonefive:client:ForceLeaveBed', function()
     LeaveBed()
 end)
----Make Damage Persistant (Disable Auto-Heal)
-SetPlayerHealthRechargeMultiplier(PlayerId(0), 0.0)
+
 
 Citizen.CreateThread(function()
     while true do
