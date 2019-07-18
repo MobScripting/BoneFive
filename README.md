@@ -17,7 +17,7 @@ Features to come:
 2. ----
 
 Known Issues:
-1. Disabling the Auto-Heal only works when moving
+1. N/A
 
 Installation:
 1. Import SQL(REQUIRED)
