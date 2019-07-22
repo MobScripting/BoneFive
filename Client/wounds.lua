@@ -334,10 +334,20 @@ function ProcessRunStuff(ped)
     end
 end
 
+Citizen.CreateThread(function()
+    while true do
+        for k, v in pairs(injured) do
+            if (v.part == 'RARM' and v.severity >= 1) or (v.part == 'LARM' and v.severity >= 1) then
+                BlockWeaponWheelThisFrame()
+            end
+        end
+    end
+end)
+
 function ProcessDamage(ped)
     if not IsEntityDead(ped) or not (onDrugs > 0) then
         for k, v in pairs(injured) do
-            if (v.part == 'LLEG' and v.severity > 1) or (v.part == 'RLEG' and v.severity > 1) or (v.part == 'LFOOT' and v.severity > 2) or (v.part == 'RFOOT' and v.severity > 2) then
+            if (v.part == 'LLEG' and v.severity >= 1) or (v.part == 'RLEG' and v.severity >= 1) or (v.part == 'LFOOT' and v.severity >= 2) or (v.part == 'RFOOT' and v.severity >= 2) then
                 if legCount >= 15 then
                     if not IsPedRagdoll(ped) and IsPedOnFoot(ped) then
                         local chance = math.random(100)
@@ -359,7 +369,7 @@ function ProcessDamage(ped)
                 else
                     legCount = legCount + 1
                 end
-            elseif (v.part == 'LARM' and v.severity > 1) or (v.part == 'LHAND' and v.severity > 1) or (v.part == 'LFINGER' and v.severity > 2) or (v.part == 'RARM' and v.severity > 1) or (v.part == 'RHAND' and v.severity > 1) or (v.part == 'RFINGER' and v.severity > 2) then
+            elseif (v.part == 'LARM' and v.severity >= 1) or (v.part == 'LHAND' and v.severity >= 1) or (v.part == 'LFINGER' and v.severity >= 2) or (v.part == 'RARM' and v.severity >= 1) or (v.part == 'RHAND' and v.severity >= 1) or (v.part == 'RFINGER' and v.severity >= 2) then
                 if armcount >= 30 then
                     local chance = math.random(100)
 
@@ -367,7 +377,7 @@ function ProcessDamage(ped)
                 else
                     armcount = armcount + 1
                 end
-            elseif (v.part == 'HEAD' and v.severity > 2) then
+            elseif (v.part == 'HEAD' and v.severity >= 2) then
                 if headCount >= 30 then
                     local chance = math.random(100)
 
