@@ -13,7 +13,7 @@ Features:
 2. Side effects from injuries
 
 Features to come:
-1. Ability for EMS to heal injuries
+1. Once arm is injured weapon wheel becomes disabled until healed
 2. ----
 
 Known Issues:
