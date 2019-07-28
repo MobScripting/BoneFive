@@ -1,0 +1,8 @@
+Version 0.0.1.1
+
+Added:
+Once a player's arm gets injured they can no longer pull a weapon from the weapon wheel.
+
+Bug Fixes:
+1. Player now ragdolls after sustaining injuries to legs/feet
+2. Player now blacks out after sustaining heavy head injuries.
