@@ -237,7 +237,7 @@ local weapons = {
     [`WEAPON_STICKYBOMB`] = WeaponClasses['EXPLOSIVE'],
     
     --[[ Other ]]--
-    [`WEAPON_FALL`] = WeaponClasses['OTHER'], -- Fall
+    [`WEAPON_FALL`] = WeaponClasses['FALL'], -- Fall
     [`WEAPON_HIT_BY_WATER_CANNON`] = WeaponClasses['OTHER'], -- Water Cannon
     [`WEAPON_RAMMED_BY_CAR`] = WeaponClasses['OTHER'], -- Rammed
     [`WEAPON_RUN_OVER_BY_CAR`] = WeaponClasses['OTHER'], -- Ran Over
@@ -341,8 +341,11 @@ Citizen.CreateThread(function()
                 BlockWeaponWheelThisFrame()
             end
         end
+        Citizen.Wait(0)
     end
 end)
+
+
 
 function ProcessDamage(ped)
     if not IsEntityDead(ped) or not (onDrugs > 0) then
