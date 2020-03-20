@@ -2,6 +2,8 @@
 # Written by MobTV
 Complex bone structure/injury system for FiveM
 
+Good News, I am planning on returning to development of BoneFive very soon. Stay tuned!
+
 This script is based heavily on the Mythic_Hospital script. Therefore, it does require mythic_progressbar, and mythic_notify.
 
 Dependencies:
